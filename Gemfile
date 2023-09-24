@@ -16,11 +16,11 @@ end
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'byebug'
   gem 'database_cleaner'
   gem 'cucumber-rails', require: false
   gem 'rspec-rails'
-
   gem 'pry'
   gem 'pry-byebug'
 
@@ -40,3 +40,8 @@ group :test do
   gem 'capybara'         # lets Cucumber pretend to be a web browser
   gem 'launchy'          # a useful debugging aid for user stories
 end
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection", "~> 1.0"
